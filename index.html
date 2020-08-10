@@ -1,81 +1,236 @@
-<!DOCTYPE HTML>
-<html lang="es">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8"> <!-- no problemas caracteres raros -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- ajuste panatlla, usra todo el espacio -->
-    <title>SPVD Estudio</title>
-    <link rel="icon" type="image/png" href="media/favicon.png" /> <!-- favicon, imagen pequeña de la pestaña -->
-    <!-- Metadatos genéricos -->
-    <meta name="description" content="Estudio de diseño emergente de estudiantes de la Pontificia Universidad Católica de Chile">
-    <meta name="image" type="image/jpg" href="media/Imagen_de_busqueda2.jpg"> <!-- completar con url de imagen completo una vez q la pagina este lista -->
-    <!-- Metadatos Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="SPVD Estudio">
-    <meta name="twitter:description" content="Estudio de diseño emergente de estudiantes de la Pontificia Universidad Católica de Chile">
-    <meta name="twitter:image:src" type="image/jpg" content="media/Imagen_de_busqueda2.jpg">
-    <!-- Metadatos Open Graph (Facebook, Pinterest & LinkedIn) -->
-    <meta name="og:title" content="SPVD Estudio">
-    <meta name="og:description" content="Estudio de diseño emergente de estudiantes de la Pontificia Universidad Católica de Chile">
-    <meta name="og:image" content="media/Imagen_de_busqueda2.jpg">
-    <meta name="og:type" content="website">
-    <!-- Ahora vinculamos el estilo -->
-    <link rel="stylesheet" href="estilo.css" type="text/css">
-</head>
-<section id="inicio">
-    <h5>inicio</h5>
-</section>
-<body>
-    <header>
-    <div id="navbar">
-            <a href="#inicio">Inicio</a>
-            <a href="#uno">Diseñadores</a>
-            <a href="#dos">Trabajos</a>
-        </div>
-        <h1>SPVD Estudio</h1>
-        <h2>Diseño integral fundado en la Universidad Católica <br/> -Vicente Donoso-Sebastián Pavlovic- </h2>
-    </header>
-    
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><!-- modificar video, poner el q queramos, y dos opciones porsiaca-->
-        <source src="media/Video_Banner.webm" type="video/webm">
-        <source src="media/Video_Banner.mp4" type="video/mp4">
-    </video>
-    <main>
-        <h3 id="uno">Quiénes somos</h3>
-        <section id="equipo">
-            <!-- se esocnde con css, pero al estar otorga accesibilidad para los lectores text to speech y todo eso, actua como categorizador de contenido -->
-            <div class="integrante">
-                <h4>Vicente Donoso</h4>
-                <address><a href="mailto:vudonoso@uc.cl">vudonoso@uc.cl</a></address>
-                <address><a href="https://www.instagram.com/space_pirate_osonod_etneciv/?hl=es-la">@space_pirate_osonod_etneciv</a></address>
-                <blockquote>Jack of  all trades, master of none. Better than master of one.<cite>Dicho Popular</cite></blockquote>
-            </div>
-            <div class="integrante">
-                <h4>Sebastián Pavlovic</h4>
-                <address><a href="mailto:smpavlovic@uc.cl">smpavlovic@uc.cl</a></address>
-                <address><a href="https://www.instagram.com/seba.pavlovic/?hl=es-la">@seba.pavlovic</a></address>
-                <blockquote>Getting the right people and the right chemistry is more important than getting the right idea.<cite>Ed Catmull</cite></blockquote>
-            </div>
-        </section>
-        <h3 id="dos">Nuestros trabajos</h3>
-        <section id="portafolio">
-            <!--acá se colocan y organizan las cosas con programación-->
-        </section>
-    </main>
-    <footer> 
-        <p>Procesos de Producción · sección web · segundo semestre · 2019</p>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
-    <script>
-        window.onload = function() {
-            var container = document.querySelector('#portafolio');
-            var msnry = new Masonry(portafolio, {
-                itemSelector: '.item'
-            });
-        };
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="portafolio.js"></script>
-</body>
+	
+	<title>xilófono web</title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-</html>
+	<link href="https://fonts.googleapis.com/css?family=Chewy|Fredoka+One" rel="stylesheet">
+
+	<style>
+		
+		/*cambia la apariencia del cursor dentro de la pagina al palo de marimba custom que hice*/
+		* { cursor: url(marimba1b.png), default; }
+		/*:active {
+			cursor: url(marimba2b.png),  default;
+		}*/
+
+		body {
+			background: floralwhite;
+			font-family: "Fredoka One", "Chewy", "helvetica", cursive;
+		}
+
+		div {
+			margin: auto;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		/*especificaciones para caracteristicas de los botones y cualidades
+		de cada nota*/
+		.button {
+			background-color: white;
+			border: none;
+			color: floralwhite;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-family: "Fredoka One", "Chewy", "helvetica", cursive;
+			font-size: 20px;
+			margin: 13px;
+		}
+
+		/*permite generar la "animacion" del palito de marimba al hacer click*/
+		.button:active {
+			cursor: url(marimba2b.png),  default;
+		}
+
+		#buttondo {
+			background-color: tomato;
+			padding: 80px 7px;
+			margin-left: 33%;
+
+		}
+
+		#buttondo:hover {
+			background-color: crimson;
+		}
+
+		#buttonre {
+			background-color: gold;
+			padding: 90px 9px;
+		}
+
+		#buttonre:hover {
+			background-color: goldenrod;
+		}
+
+		#buttonmi {
+			background-color: darkslateblue;
+			padding: 100px 8px;
+		}
+
+		#buttonmi:hover {
+			background-color: midnightblue;
+		}
+
+		#buttonfa {
+			background-color: lightblue;
+			padding: 110px 10px;
+		}
+
+		#buttonfa:hover {
+			background-color: lightsteelblue;
+		}
+
+		#buttonsol {
+			background-color: limegreen;
+			padding: 120px 5px;
+		}
+
+		#buttonsol:hover {
+			background-color: forestgreen;
+		}
+
+		#buttonla {
+			background-color: darkviolet;
+			padding: 130px 10px;
+		}
+
+		#buttonla:hover {
+			background-color: rebeccapurple;
+		}
+
+		#buttonsi {
+			background-color: orange;
+			padding: 140px 12px;
+		}
+
+		#buttonsi:hover {
+			background-color: darkorange;
+		}
+
+		#buttonDo {
+			background-color: peru;
+			padding: 150px 6px;
+		}
+
+		#buttonDo:hover {
+			background-color: chocolate;
+		}
+
+	</style>
+	
+</head>
+
+<body>
+
+	<!--audios utilizados para cada nota-->
+	<audio id=notado src="23002__danmitch3ll__xylophone-do-editado.wav" preload="auto"></audio>
+	<audio id=notare src="232008__danmitch3ll__xylophone-re-editado.wav" preload="auto"></audio>
+	<audio id=notami src="232007__danmitch3ll__xylophone-mi-editado.wav" preload="auto"></audio>
+	<audio id=notafa src="232006__danmitch3ll__xylophone-fa-editado.wav" preload="auto"></audio>
+	<audio id=notasol src="232005__danmitch3ll__xylophone-sol-editado.wav" preload="auto"></audio>
+	<audio id=notala src="232004__danmitch3ll__xylophone-la-editado.wav" preload="auto"></audio>
+	<audio id=notasi src="232003__danmitch3ll__xylophone-si-editado.wav" preload="auto"></audio>
+	<audio id=notaDo src="232001__danmitch3ll__xylophone-Do-editado.wav" preload="auto"></audio>
+
+
+	<h1>Bienvenidos a mi <span style="color:tomato">x</span><span style="color:limegreen">i</span><span style="color:darkslateblue">l</span><span style="color:darkviolet">ó</span><span style="color:gold">f</span><span style="color:lightblue">o</span><span style="color:darkorange">n</span><span style="color:peru">o</span> virtual</h1>
+	
+	<br>
+	<br>
+	<br>
+
+	<div>
+	<button onclick="nota1();" id="buttondo" class="button">do</button>
+	<button onclick="nota2();" id="buttonre" class="button">re</button>
+	<button onclick="nota3();" id="buttonmi" class="button">mi</button>
+	<button onclick="nota4();" id="buttonfa" class="button">fa</button>
+	<button onclick="nota5();" id="buttonsol" class="button">sol</button>
+	<button onclick="nota6();" id="buttonla" class="button">la</button>
+	<button onclick="nota7();" id="buttonsi" class="button">si</button>
+	<button onclick="nota8();" id="buttonDo" class="button">Do</button>
+	</div>
+
+	<script type="text/javascript">
+
+		//funciones para el sonido de las notas
+		function nota1() {
+    		var Ndo = document.getElementById('notado');
+    		if (Ndo.paused) {
+    			Ndo.play();
+    		}else{
+    			Ndo.currentTime = 0
+    		}
+		}
+
+		function nota2() {
+    		var Ndo = document.getElementById('notare');
+    		if (Ndo.paused) {
+    			Ndo.play();
+    		}else{
+    			Ndo.currentTime = 0
+    		}
+		}
+
+		function nota3() {
+    		var Ndo = document.getElementById('notami');
+    		if (Ndo.paused) {
+    			Ndo.play();
+    		}else{
+    			Ndo.currentTime = 0
+    		}
+		}
+
+		function nota4() {
+    		var Ndo = document.getElementById('notafa');
+    		if (Ndo.paused) {
+    			Ndo.play();
+    		}else{
+    			Ndo.currentTime = 0
+    		}
+		}
+
+		function nota5() {
+    		var Ndo = document.getElementById('notasol');
+    		if (Ndo.paused) {
+    			Ndo.play();
+    		}else{
+    			Ndo.currentTime = 0
+    		}
+		}
+
+		function nota6() {
+    		var Ndo = document.getElementById('notala');
+    		if (Ndo.paused) {
+    			Ndo.play();
+    		}else{
+    			Ndo.currentTime = 0
+    		}
+		}
+
+		function nota7() {
+    		var Ndo = document.getElementById('notasi');
+    		if (Ndo.paused) {
+    			Ndo.play();
+    		}else{
+    			Ndo.currentTime = 0
+    		}
+		}
+
+		function nota8() {
+    		var Ndo = document.getElementById('notaDo');
+    		if (Ndo.paused) {
+    			Ndo.play();
+    		}else{
+    			Ndo.currentTime = 0
+    		}
+		}
+		
+	</script>
+
+</body>
